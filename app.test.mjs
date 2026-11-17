@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import { triangleCenters } from './app.mjs';
+const right = triangleCenters([[0,0],[6,0],[0,8]]);
+assert.deepEqual(right.centroid, [2,8/3]);
+assert.deepEqual(right.incenter, [2,2]);
+assert.deepEqual(right.circumcenter, [3,4]);
+assert.deepEqual(right.orthocenter, [0,0]);
+assert.equal(right.inradius, 2);
+assert.equal(right.circumradius, 5);
+assert.equal(triangleCenters([[0,0],[1,1],[2,2]]).circumcenter, null);

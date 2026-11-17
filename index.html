@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Move a triangle's vertices and compare its centroid, incenter, circumcenter and orthocenter.">
+  <title>Triangle Center Playground</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main>
+  <div class="heading">
+    <div><h1>Triangle Center Playground</h1><p>Move a triangle's vertices and compare its centroid, incenter, circumcenter and orthocenter.</p></div>
+    <a href="https://github.com/netcodermike/triangle-center-playground">Project source ↗</a>
+  </div>
+  <div class="workspace">
+    <section class="panel stage" aria-label="Project workspace">
+      <canvas width="760" height="429" tabindex="0" aria-label="Draggable triangle. Move the selected vertex using the arrow keys."></canvas>
+      <p id="reading" role="status"></p>
+    </section>
+    <section class="panel controls" aria-label="Controls">
+      <label for="shape">Triangle preset<select id="shape"><option value="acute">Acute</option><option value="right">Right</option><option value="obtuse">Obtuse</option></select></label>
+        <label for="vertex">Keyboard vertex<select id="vertex"><option value="0">A</option><option value="1">B</option><option value="2">C</option></select></label>
+        <label class="check"><input id="circles" type="checkbox" checked>Show incircle and circumcircle</label>
+        <dl class="values">
+          <div><dt>G · Centroid</dt><dd id="centroid"></dd></div><div><dt>I · Incenter</dt><dd id="incenter"></dd></div>
+          <div><dt>O · Circumcenter</dt><dd id="circumcenter"></dd></div><div><dt>H · Orthocenter</dt><dd id="orthocenter"></dd></div>
+        </dl>
+        <p>Drag a vertex, or select one, focus the diagram, and press an arrow key.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>
